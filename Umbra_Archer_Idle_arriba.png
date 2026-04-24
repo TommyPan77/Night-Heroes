@@ -1,0 +1,24 @@
+package object;
+
+import java.io.IOException;
+import javax.imageio.ImageIO;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author USER
+ */
+public class OBJ_roca1 extends SuperObject {
+    public OBJ_roca1(){
+        name = "roca1";
+        try{
+            image = ImageIO.read(getClass().getResourceAsStream("/res/player/objects/Roca de armas arriba izquierda.png"));
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+}

@@ -1,0 +1,84 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package main;
+
+import object.OBJ_escudo2;
+import object.OBJ_escudo4;
+import object.OBJ_escudo3;
+import object.OBJ_escudo1;
+import object.OBJ_arco4;
+import object.OBJ_arco3;
+import object.OBJ_arco2;
+import object.OBJ_arco1;
+import object.OBJ_espada1;
+import object.OBJ_espada2;
+import object.OBJ_espada3;
+import object.OBJ_espada4;
+
+/**
+ *
+ * @author USER
+ */
+public class AssetSetter {
+    GamePanel gp;
+    public AssetSetter(GamePanel gp){
+        this.gp=gp;
+        
+    }
+    public void setObject(){
+        if(gp.personaje.equals("tanque")){
+            gp.obj[0]=new OBJ_espada1();
+            gp.obj[0].worldX=15*gp.tileSize; //Cambiar por el lugar donde se encuentre el objeto
+            gp.obj[0].worldY=7*gp.tileSize;
+
+            gp.obj[1]=new OBJ_espada2();
+            gp.obj[1].worldX=16*gp.tileSize; //Cambiar por el lugar donde se encuentre el objeto
+            gp.obj[1].worldY=7*gp.tileSize;
+
+            gp.obj[2]=new OBJ_espada3();
+            gp.obj[2].worldX=15*gp.tileSize; //Cambiar por el lugar donde se encuentre el objeto
+            gp.obj[2].worldY=8*gp.tileSize;
+
+            gp.obj[3]=new OBJ_espada4();
+            gp.obj[3].worldX=16*gp.tileSize; //Cambiar por el lugar donde se encuentre el objeto
+            gp.obj[3].worldY=8*gp.tileSize;
+        }
+        else if(gp.personaje.equals("arquero")){
+            gp.obj[0]=new OBJ_arco1(); 
+            gp.obj[0].worldX=15*gp.tileSize;
+            gp.obj[0].worldY=7*gp.tileSize;
+            
+            gp.obj[1]=new OBJ_arco2(); 
+            gp.obj[1].worldX=16*gp.tileSize;
+            gp.obj[1].worldY=7*gp.tileSize;
+            
+            gp.obj[2]=new OBJ_arco3(); 
+            gp.obj[2].worldX=15*gp.tileSize;
+            gp.obj[2].worldY=8*gp.tileSize;
+            
+            gp.obj[3]=new OBJ_arco4(); 
+            gp.obj[3].worldX=16*gp.tileSize;
+            gp.obj[3].worldY=8*gp.tileSize;
+        }
+    
+        else if(gp.personaje.equals("caballero")){
+            gp.obj[0]=new OBJ_escudo1(); 
+            gp.obj[0].worldX=15*gp.tileSize;
+            gp.obj[0].worldY=7*gp.tileSize;
+            
+            gp.obj[1]=new OBJ_escudo2(); 
+            gp.obj[1].worldX=16*gp.tileSize;
+            gp.obj[1].worldY=7*gp.tileSize;
+            
+            gp.obj[2]=new OBJ_escudo3(); 
+            gp.obj[2].worldX=15*gp.tileSize;
+            gp.obj[2].worldY=8*gp.tileSize;
+            
+            gp.obj[3]=new OBJ_escudo4(); 
+            gp.obj[3].worldX=16*gp.tileSize;
+            gp.obj[3].worldY=8*gp.tileSize;
+        }
+    }
+}
